@@ -163,7 +163,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d58c403aeb56dc74c80e7e8ed165451d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17735,7 +17735,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 2121413dd017a9a41be2e41970fa3fd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -33316,6 +33316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   banner: {fileID: 11400000, guid: b3937f3bd3c41f4418e3f7bd97373993, type: 2}
   dificultyRate: 2
+  maximumCap: 100000
 --- !u!1 &1930268752
 GameObject:
   m_ObjectHideFlags: 0

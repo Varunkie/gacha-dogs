@@ -11,7 +11,7 @@ namespace Assets.Scripts
         public PetAssetBannerList banner;
         private List<PetAsset> _pullList;
         public float dificultyRate = 1.2f;
-
+        public int maximumCap = 100000;
 
         public static PullManager Instance
         {
@@ -51,7 +51,8 @@ namespace Assets.Scripts
                 PlayerManager.Instance.RemoveLove(Cost);
                 PetAsset pet = GeneratePull();
                 PlayerManager.Instance.PetInventory.Add(pet);
-                Cost = (int)(Cost * dificultyRate);
+                if (Cost < maximumCap)
+                    Cost = Mathf.Min((int)(Cost * dificultyRate), maximumCap);
                 return pet;
             }
             return null;
