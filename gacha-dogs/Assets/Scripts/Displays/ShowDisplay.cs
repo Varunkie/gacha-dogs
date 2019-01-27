@@ -13,6 +13,8 @@ namespace Assets.Scripts
         public GameObject nextButton;
         public GameObject previousButton;
 
+        private PlayAudioSource _audio;
+
         private List<FacilityUpgrade> _showList;
         private FacilityUpgradeDisplay[] _displays;
         private int _index = 0;
@@ -20,6 +22,8 @@ namespace Assets.Scripts
         private void Awake()
         {
             _displays = GetComponentsInChildren<FacilityUpgradeDisplay>();
+            _audio = GetComponentInChildren<PlayAudioSource>();
+
             _showList = new List<FacilityUpgrade>();
             _showList.AddRange(list.upgrades);
         }
@@ -49,6 +53,7 @@ namespace Assets.Scripts
             if (PlayerManager.Instance.BuyFacility(upgrade))
             {
                 _showList.RemoveAt(index); Populate();
+                _audio.Play();
             }
         }
 

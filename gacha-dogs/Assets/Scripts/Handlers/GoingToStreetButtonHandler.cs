@@ -11,6 +11,7 @@ namespace Assets.Scripts
         public GameObject streetGameObject;
         public PullRewardHandler _pullReward;
         public Text loveCost;
+        public PlayAudioSource playAudio;
 
         private void OnEnable()
         {
@@ -26,6 +27,10 @@ namespace Assets.Scripts
                 streetGameObject.SetActive(true);
                 pullGameObject.SetActive(false);
                 _pullReward.SetPull(pull);
+            }
+            else
+            {
+                playAudio.Play();
             }
         }
     }
