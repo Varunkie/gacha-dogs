@@ -44,7 +44,8 @@ public class PetAssetDisplay : MonoBehaviour
 
         if (PlayerManager.Instance.Pets.Contains(_index))
         {
-            _prevColor = background.color;
+            if (background.color != Color.red)
+                _prevColor = background.color;
             background.color = Color.red;
             buttonText.text = "Unselect";
         }

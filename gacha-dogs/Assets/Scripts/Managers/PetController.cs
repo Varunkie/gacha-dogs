@@ -6,6 +6,7 @@ using UnityEngine;
 public class PetController : MonoBehaviour 
 {
     public int loveUp = 1;
+    public int coinUp = 0;
 
     private SpriteRenderer _renderer;
 
@@ -19,6 +20,8 @@ public class PetController : MonoBehaviour
         if (pet != null)
         {
             loveUp = pet.loveUp;
+            coinUp = pet.coinUp;
+
             _renderer.sprite = pet.sprite;
             gameObject.SetActive(true);
         }
@@ -31,6 +34,9 @@ public class PetController : MonoBehaviour
     private void OnMouseUp()
     {
         if (PlayerManager.Instance.MenuState == PlayerMenuState.Home)
+        {
+            PlayerManager.Instance.AddCoins(coinUp);
             PlayerManager.Instance.AddLove(loveUp);
+        }
     }
 }

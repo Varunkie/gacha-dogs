@@ -11,7 +11,7 @@ namespace Assets.Scripts
     {
         public int loveUp;
         public int coinUp;
-        public string description;
+        [TextArea] public string description;
         public Sprite sprite;
         public Sprite face;
     }

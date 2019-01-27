@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903e4f9690b586a409d9674db8d871bd, type: 3}
+  m_Name: PetInitialBanner
+  m_EditorClassIdentifier: 
+  list:
+  - {fileID: 11400000, guid: 4344351552252e649921eea3ea15fecb, type: 2}
+  - {fileID: 11400000, guid: afe54d99c5176e24999232eba690952f, type: 2}
+  - {fileID: 11400000, guid: a9ef31241385f1e4f84cd40ebcef9cf9, type: 2}
+  - {fileID: 11400000, guid: 91efa83754418d34c9bef3ae8a7af08f, type: 2}
+  - {fileID: 11400000, guid: b7ee3150731ff4541ae4643d2bdfc1a3, type: 2}
+  - {fileID: 11400000, guid: 920f654a0f842a64ab0ab66f9fb615b4, type: 2}
+  - {fileID: 11400000, guid: 34c8c655a303f12409d64924bf3c763f, type: 2}
