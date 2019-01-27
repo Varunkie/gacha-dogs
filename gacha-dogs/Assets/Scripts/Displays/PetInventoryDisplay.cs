@@ -24,7 +24,7 @@ namespace Assets.Scripts
             _displays = GetComponentsInChildren<PetAssetDisplay>();
         }
 
-        private void Start()
+        private void OnEnable()
         {
             Populate();
         }

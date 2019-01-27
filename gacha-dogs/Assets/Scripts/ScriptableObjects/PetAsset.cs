@@ -13,5 +13,6 @@ namespace Assets.Scripts
         public int coinUp;
         public string description;
         public Sprite sprite;
+        public Sprite face;
     }
 }

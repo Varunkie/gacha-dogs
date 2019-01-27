@@ -8,11 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c3b5a82ad81f44a821cffaade2d3fa, type: 3}
-  m_Name: PetAsset1
+  m_Script: {fileID: 11500000, guid: 903e4f9690b586a409d9674db8d871bd, type: 3}
+  m_Name: PetAssetBannerList1
   m_EditorClassIdentifier: 
-  loveUp: 0
-  coinUp: 0
-  description: 
-  sprite: {fileID: 21300000, guid: 84c6512f2417a7645a5af657ab09845e, type: 3}
-  face: {fileID: 0}
+  list:
+  - {fileID: 11400000, guid: 4344351552252e649921eea3ea15fecb, type: 2}

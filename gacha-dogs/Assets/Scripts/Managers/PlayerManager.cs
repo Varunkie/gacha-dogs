@@ -74,7 +74,9 @@ public class PlayerManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = GetComponent<PlayerManager>();
-            Pets = new List<int>(); 
+            Pets = new List<int>();
+            if (PetInventory.Count > 0)
+                Pets.Add(0);
             DontDestroyOnLoad(Instance);
         }
         else
@@ -84,6 +86,11 @@ public class PlayerManager : MonoBehaviour
     public void AddLove(int value)
     {
         Love += value + _loveBonusUp;
+    }
+
+    public void RemoveLove(int value)
+    {
+        Love -= value;
     }
 
     public void AddCoins(int value)
@@ -127,5 +134,6 @@ public enum PlayerMenuState
     Home,
     Pull,
     Shop,
-    Pets
+    Pets,
+    Pulling
 }

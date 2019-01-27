@@ -25,11 +25,6 @@ public class FacilityUpgradeDisplay : MonoBehaviour
         _index = -1;
     }
 
-    private void Start()
-    {
-        Populate();
-    }
-
     private void Populate()
     {
         if (_upgrade != null)

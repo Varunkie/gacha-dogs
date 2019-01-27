@@ -10,26 +10,20 @@ using UnityEngine.UI;
 public class PetAssetDisplay : MonoBehaviour
 {
     public TextMeshProUGUI description;
+
     public Image texture;
     public Image background;
     public Text buttonText;
 
     [SerializeField] private PetAsset _asset;
-    private PetInventoryDisplay _inventory;
-    private Color _originalColor;
+    private Color _prevColor;
     private int _index;
+
+    private PetControllerDisplay _display;
 
     private void Awake()
     {
-        _inventory = GetComponentInParent<PetInventoryDisplay>();
-        _index = -1; 
-    }
-
-    private void Start()
-    {
-        _originalColor = background.color;
-
-        Populate();
+        _display = FindObjectOfType<PetControllerDisplay>();
     }
 
     private void Populate()
@@ -45,19 +39,23 @@ public class PetAssetDisplay : MonoBehaviour
         if (!gameObject.activeInHierarchy)
             gameObject.SetActive(true);
 
-        texture.sprite = _asset.sprite;
+        texture.sprite = _asset.face;
         description.text = _asset.description;
 
         if (PlayerManager.Instance.Pets.Contains(_index))
         {
+            _prevColor = background.color;
             background.color = Color.red;
             buttonText.text = "Unselect";
         }
         else
         {
-            background.color = _originalColor;
+            if (background.color == Color.red)
+                background.color = _prevColor;
             buttonText.text = "Select";
         }
+
+        print(_index);
     }
 
     public void SetPetAsset(PetAsset asset, int index)
@@ -73,12 +71,12 @@ public class PetAssetDisplay : MonoBehaviour
         if (PlayerManager.Instance.Pets.Contains(_index))
         {
             PlayerManager.Instance.Pets.Remove(_index);
+            Populate(); _display.Populate();
         }
-        else
+        else if (PlayerManager.Instance.Pets.Count < 4)
         {
             PlayerManager.Instance.Pets.Add(_index);
+            Populate(); _display.Populate();
         }
-
-        Populate();
     }
 }
