@@ -46,7 +46,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (_love != value)
             {
-                _love = value; OnLoveChange();
+                _love = Mathf.Max(value, 0); OnLoveChange();
             }
         }
     }
@@ -58,7 +58,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (_coins != value)
             {
-                _coins = value; OnCoinChange();
+                _coins = Mathf.Max(value, 0); OnCoinChange();
             }
         }
     }
@@ -88,6 +88,11 @@ public class PlayerManager : MonoBehaviour
         Love += value + _loveBonusUp;
     }
 
+    public void AddLoveWithoutModifiers(int value)
+    {
+        Love += value;
+    }
+
     public void RemoveLove(int value)
     {
         Love -= value;
@@ -96,6 +101,11 @@ public class PlayerManager : MonoBehaviour
     public void AddCoins(int value)
     {
         Coins += value + _coinBonusUp;
+    }
+
+    public void AddCoinsWithoutModifiers(int value)
+    {
+        Coins += value;
     }
 
     public bool BuyFacility(FacilityUpgrade upgrade)

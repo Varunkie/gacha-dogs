@@ -11,8 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08c3b5a82ad81f44a821cffaade2d3fa, type: 3}
   m_Name: Pez
   m_EditorClassIdentifier: 
-  loveUp: 0
-  coinUp: 0
+  loveUp: -1
+  coinUp: -1
+  loveBySecond: 0
+  coinBySecond: 0
   description: Este pez te trae malos recuerdos.
   sprite: {fileID: 21300000, guid: e2e0627a8b5fb2e4bae77c7f45f58e5b, type: 3}
-  face: {fileID: 21300000, guid: e2e0627a8b5fb2e4bae77c7f45f58e5b, type: 3}
+  sprite2: {fileID: 21300000, guid: 3d99293d52910dc46b682b3a8ee5576c, type: 3}
+  idleTime: 1

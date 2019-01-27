@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loveUp: 25
   coinUp: -50
+  loveBySecond: 5
+  coinBySecond: -10
   description: La mascota mas adorable que puedes tener.
   sprite: {fileID: 21300000, guid: c0327f329b3743f438207dbb468f9de5, type: 3}
-  face: {fileID: 21300000, guid: c0327f329b3743f438207dbb468f9de5, type: 3}
+  sprite2: {fileID: 21300000, guid: 386ba7fc96321cd4092e607b271434ba, type: 3}
+  idleTime: 1

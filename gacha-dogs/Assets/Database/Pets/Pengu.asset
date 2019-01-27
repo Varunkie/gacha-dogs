@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loveUp: 15
   coinUp: 0
+  loveBySecond: 3
+  coinBySecond: 0
   description: Un pinguino adorable que encontraste en la calle en pleno verano.
   sprite: {fileID: 21300000, guid: 4500509f5fa61624a908d831880586d7, type: 3}
-  face: {fileID: 21300000, guid: 4500509f5fa61624a908d831880586d7, type: 3}
+  sprite2: {fileID: 21300000, guid: 32ed50d3d899bfa49af135a36d179377, type: 3}
+  idleTime: 1

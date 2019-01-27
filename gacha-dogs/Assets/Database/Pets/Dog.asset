@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loveUp: 1
   coinUp: 0
+  loveBySecond: 1
+  coinBySecond: 0
   description: "Tu fiel compa\xF1ero, su perro favorito y tu mejor amigo."
   sprite: {fileID: 21300000, guid: 7dfd75e5c8500f44ca9dac5e13b54f27, type: 3}
-  face: {fileID: 21300000, guid: 7dfd75e5c8500f44ca9dac5e13b54f27, type: 3}
+  sprite2: {fileID: 21300000, guid: 02a201603378ca44fa7911c14363249d, type: 3}
+  idleTime: 1

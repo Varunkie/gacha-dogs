@@ -39,7 +39,7 @@ public class PetAssetDisplay : MonoBehaviour
         if (!gameObject.activeInHierarchy)
             gameObject.SetActive(true);
 
-        texture.sprite = _asset.face;
+        texture.sprite = _asset.sprite;
         description.text = _asset.description;
 
         if (PlayerManager.Instance.Pets.Contains(_index))
@@ -55,8 +55,6 @@ public class PetAssetDisplay : MonoBehaviour
                 background.color = _prevColor;
             buttonText.text = "Select";
         }
-
-        print(_index);
     }
 
     public void SetPetAsset(PetAsset asset, int index)

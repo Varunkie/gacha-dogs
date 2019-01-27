@@ -13,6 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loveUp: 30
   coinUp: 0
+  loveBySecond: 10
+  coinBySecond: 0
   description: Un bebe dragon temible y adorable, son muy raros.
   sprite: {fileID: 21300000, guid: 3b913a037a075de4d8552b69956ee798, type: 3}
-  face: {fileID: 21300000, guid: 3b913a037a075de4d8552b69956ee798, type: 3}
+  sprite2: {fileID: 21300000, guid: 34db5e33ec12ac34a931afaebd13dced, type: 3}
+  idleTime: 1

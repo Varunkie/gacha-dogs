@@ -11,8 +11,13 @@ namespace Assets.Scripts
     {
         public int loveUp;
         public int coinUp;
+
+        public int loveBySecond;
+        public int coinBySecond;
+
         [TextArea] public string description;
         public Sprite sprite;
-        public Sprite face;
+        public Sprite sprite2;
+        public float idleTime = 1f;
     }
 }
