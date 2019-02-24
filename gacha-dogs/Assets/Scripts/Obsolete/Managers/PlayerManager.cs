@@ -14,8 +14,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField, ReadOnly] private int _coinBonusUp;
     [SerializeField, ReadOnly] private int _loveBonusUp;
 
-    public event GameEventHandler LoveChanged;
-    public event GameEventHandler CoinChanged;
+    public event GameEventHandlerObsolete LoveChanged;
+    public event GameEventHandlerObsolete CoinChanged;
 
     private int _love;
     private int _coins;
@@ -137,7 +137,7 @@ public class PlayerManager : MonoBehaviour
     }
 }
 
-public delegate void GameEventHandler(object sender);
+public delegate void GameEventHandlerObsolete(object sender);
 
 public enum PlayerMenuState
 {

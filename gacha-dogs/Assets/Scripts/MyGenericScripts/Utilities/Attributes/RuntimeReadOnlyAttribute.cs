@@ -5,19 +5,19 @@ using UnityEditor;
 using System;
 #endif
 
-public class ReadOnlyAttribute
+public class RuntimeReadOnlyAttribute
 #if UNITY_EDITOR
     : PropertyAttribute
 #else
     : Attribute
 #endif
 {
-    public ReadOnlyAttribute() { }
+    public RuntimeReadOnlyAttribute() { }
 }
 
 #if UNITY_EDITOR
-[CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
-public class ReadOnlyDrawer : PropertyDrawer
+[CustomPropertyDrawer(typeof(RuntimeReadOnlyAttribute))]
+public class RuntimeReadOnlyDrawer : PropertyDrawer
 {
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
@@ -26,9 +26,11 @@ public class ReadOnlyDrawer : PropertyDrawer
 
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        GUI.enabled = false;
+        if (Application.isPlaying)
+            GUI.enabled = false;
         EditorGUI.PropertyField(position, property, label, true);
-        GUI.enabled = true;
+        if (Application.isPlaying)
+            GUI.enabled = true;
     }
 }
 #endif
