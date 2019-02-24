@@ -13,7 +13,7 @@ namespace Assets.Scripts
         public GameObject nextButton;
         public GameObject previousButton;
 
-        private PlayAudioSource _audio;
+        private PlayOneShotAudioSource _audio;
 
         private List<FacilityUpgrade> _showList;
         private FacilityUpgradeDisplay[] _displays;
@@ -22,7 +22,7 @@ namespace Assets.Scripts
         private void Awake()
         {
             _displays = GetComponentsInChildren<FacilityUpgradeDisplay>();
-            _audio = GetComponentInChildren<PlayAudioSource>();
+            _audio = GetComponentInChildren<PlayOneShotAudioSource>();
 
             _showList = new List<FacilityUpgrade>();
             _showList.AddRange(list.upgrades);

@@ -9,7 +9,7 @@ public class PetController : MonoBehaviour
     public int coinUp = 0;
 
     public ParticleSystem particle;
-    public PlayAudioSource _audio;
+    public PlayOneShotAudioSource _audio;
 
     private SpriteRenderer _renderer;
     private PetAsset _asset;
@@ -22,7 +22,7 @@ public class PetController : MonoBehaviour
     private void Awake()
     {
         _renderer = GetComponent<SpriteRenderer>();
-        _audio = GetComponentInChildren<PlayAudioSource>();
+        _audio = GetComponentInChildren<PlayOneShotAudioSource>();
     }
 
     private void Update()

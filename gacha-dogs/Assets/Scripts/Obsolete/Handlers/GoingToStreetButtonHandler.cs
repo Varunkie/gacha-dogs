@@ -11,7 +11,7 @@ namespace Assets.Scripts
         public GameObject streetGameObject;
         public PullRewardHandler _pullReward;
         public Text loveCost;
-        public PlayAudioSource playAudio;
+        public PlayOneShotAudioSource playAudio;
 
         private void OnEnable()
         {

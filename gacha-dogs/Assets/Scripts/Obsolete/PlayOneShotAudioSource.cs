@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class PlayAudioSource : MonoBehaviour
+public class PlayOneShotAudioSource : MonoBehaviour
 {
     public AudioClip sound;
     private AudioSource _audio;

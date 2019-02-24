@@ -15,12 +15,12 @@ namespace Assets.Scripts
         public AudioSource background;
         public ParticleSystem gachaParticle;
 
-        private PlayAudioSource _audio;
+        private PlayOneShotAudioSource _audio;
 
         private void Awake()
         {
             rewardImage = GetComponent<SpriteRenderer>();
-            _audio = GetComponentInChildren<PlayAudioSource>();
+            _audio = GetComponentInChildren<PlayOneShotAudioSource>();
         }
 
         public void SetPull(PetAsset pet)
